@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<docs> 
+    <members name="generator">
+       <Generator>
+            <summary>
+            The main <c>Generator</c> class. 
+            </summary>
+            <remarks>
+            This class can Generate Employee Ids
+            </remarks>
+            <returns>
+            employeeId as a string
+            </returns>
+        </Generator>
+       <GenerateId>
+          <summary>
+            Generates employee Id by processing <paramref name="fname"/> , <paramref name="lname"/> and <paramref name="hireDate"/> return the result
+            <list type="bullet">
+              <item>
+                <term>II</term>
+                <description> Employee Initials</description>
+              </item>
+              <item>
+                <term>YY</term>
+                <description> Hire year Two digits</description>
+              </item>
+              <item>
+                <term>MM</term>
+                <description> Hire month Two digits</description>
+              </item>
+              <item>
+                <term>DD</term>
+                <description> Hire day Two digits</description>
+              </item>
+              <item>
+                <term>SS</term>
+                <description> Two Digit Sequence Number 01 - 99</description>
+              </item>
+            </list>
+          </summary>
+          <remarks>
+            <para>The method expect employee details First name, last name and hire date</para>
+          </remarks>
+          <returns>
+            employee Id as a string II YY MM DD SS
+          </returns>
+          <example>
+            <code>
+              var id = IdGenerator.Generate("John", "Smith", new DateTime(2000, 10, 9, 0, 0, 0));
+              Console.WriteLine(id);
+            </code>
+          </example>
+          <param name="fname">employee first name</param>
+          <param name="lname">employee last name</param>
+          <param name="hireDate">employee hire date</param>
+          <exception cref="T:System.InvalidOperationException">
+            Thrown when one <paramref name="fname"/> is null.
+          </exception>
+          <exception cref="T:System.InvalidOperationException">
+            Thrown when one <paramref name="lname"/> is null.
+          </exception>
+          <exception cref="T:System.InvalidOperationException">
+            Thrown when one <paramref name="hireDate"/> is null.
+          </exception>
+          See <see cref="M:CAXMLDocumentation.Generator.GeneratePassword(System.Int32)"/> to generate random password
+        </GenerateId> 
+    </members>
+</docs>
